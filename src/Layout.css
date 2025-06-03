@@ -1,0 +1,87 @@
+
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #1f1f1f;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --nav-bg-light: #f4f4f4;
+  --nav-bg-dark: #2c2c2c;
+  --header-bg-light: #eaeaea;
+  --header-bg-dark: #333333;
+}
+
+body[data-theme='light'] {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body[data-theme='dark'] {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.layout-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--header-bg-light);
+}
+
+body[data-theme='dark'] .header {
+  background-color: var(--header-bg-dark);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.app-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.theme-toggle {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: var(--nav-bg-light);
+}
+
+body[data-theme='dark'] .nav-links {
+  background-color: var(--nav-bg-dark);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  padding: 20px;
+  flex-grow: 1;
+}
